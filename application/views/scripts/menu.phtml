@@ -1,19 +1,16 @@
 
-<div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-    Dropdown
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-      <?php foreach ($this->menu as $menu): ?>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="<?php echo $this->url(array(
-        'controller' => $menu['controller'],
-        'action' => $menu['action'],
-        'default'
-    ))?>"><?php echo $menu['tytul'] ?></a></li>
-    
-    <?php endforeach;?>
-    
-  </ul>
-</div>
+            <?php foreach ($this->menu as $menu): ?>
+              <li>
+                 <a href="<?php 
+                 echo $this->url(array(
+                     'controller' => $menu['controller'],
+                     'action'=>$menu['action'])
+                         ,  'default' 
+                         )?>">
+                             <?php echo $menu['tytul'] ?></a></li>
+              <?php endforeach;?>
+          
+
+
+ 
 
